@@ -1,39 +1,91 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop_app/constants.dart';
+import 'package:flutter_svg/svg.dart';
 
+import '../../../constants.dart';
 import '../../../size_config.dart';
+import 'section_title.dart';
 
 class Categories extends StatelessWidget {
+  const Categories({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> categories = [
-      {"icon": "assets/icons/Flash Icon.svg", "text": "Flash Deal"},
-      {"icon": "assets/icons/Bill Icon.svg", "text": "Bill"},
-      {"icon": "assets/icons/Game Icon.svg", "text": "Game"},
-      {"icon": "assets/icons/Gift Icon.svg", "text": "Daily Gift"},
-      {"icon": "assets/icons/Discover.svg", "text": "More"},
-    ];
-    return Padding(
-      padding: EdgeInsets.all(getProportionateScreenWidth(20)),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: List.generate(
-          categories.length,
-          (index) => CategoryCard(
-            icon: categories[index]["icon"],
-            text: categories[index]["text"],
-            press: () {},
+    return Column(
+      children: [
+        Padding(
+          padding:
+              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+          
+        ),
+        SizedBox(height: getProportionateScreenWidth(20)),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SpecialOfferCard(
+                icon: "assets/icons/Flash Icon.svg",
+                text: "flash deal",
+                press: () {},
+              
+              ),
+              SpecialOfferCard(
+                icon: "assets/icons/Flash Icon.svg",
+                text: "flash deal",
+                press: () {},
+              ),
+              SpecialOfferCard(
+                icon: "assets/icons/Flash Icon.svg",
+                text: "flash deal",
+                press: () {},
+              ),
+              SpecialOfferCard(
+                icon: "assets/icons/Flash Icon.svg",
+                text: "flash deal",
+                press: () {},
+              ),
+              SpecialOfferCard(
+                icon: "assets/icons/Flash Icon.svg",
+                text: "flash deal",
+                press: () {},
+              ),
+              SpecialOfferCard(
+                icon: "assets/icons/Flash Icon.svg",
+                text: "flash deal",
+                press: () {},
+              ),
+              SpecialOfferCard(
+                icon: "assets/icons/Flash Icon.svg",
+                text: "flash deal",
+                press: () {},
+              ),
+              SpecialOfferCard(
+                icon: "assets/icons/Flash Icon.svg",
+                text: "flash deal",
+                press: () {},
+              ),
+              SpecialOfferCard(
+                icon: "assets/icons/Flash Icon.svg",
+                text: "flash deal",
+                press: () {},
+              ),
+              SpecialOfferCard(
+                icon: "assets/icons/Flash Icon.svg",
+                text: "flash deal",
+                press: () {},
+              ),
+              SizedBox(width: getProportionateScreenWidth(20)),
+            ],
           ),
         ),
-      ),
+      ],
     );
   }
 }
 
-class CategoryCard extends StatelessWidget {
-  const CategoryCard({
+class SpecialOfferCard extends StatelessWidget {
+  const SpecialOfferCard({
     Key? key,
     required this.icon,
     required this.text,
@@ -45,9 +97,12 @@ class CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return Padding(
+      padding: EdgeInsets.only(left: getProportionateScreenWidth(20)),
+      child :GestureDetector(
       onTap: press,
-      child: SizedBox(
+      child: 
+      SizedBox(
         width: getProportionateScreenWidth(55),
         child: Column(
           children: [
@@ -61,11 +116,13 @@ class CategoryCard extends StatelessWidget {
               ),
               child: SvgPicture.asset(icon!),
             ),
-            SizedBox(height: 5),
-            Text(text!, textAlign: TextAlign.center)
+            SizedBox(height: 10),
+            Text(text!, textAlign: TextAlign.center),
           ],
         ),
       ),
+      
+      )
     );
   }
 }
