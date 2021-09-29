@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/feedback/feedback.dart';
+import 'package:shop_app/screens/notifications/notifications.dart';
+import 'package:shop_app/screens/settings/settings.dart';
+import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
+import 'package:shop_app/screens/sign_in_phone/sign_in_phone_screen.dart';
 
 import 'profile_menu.dart';
 import 'profile_pic.dart';
@@ -10,7 +15,7 @@ class Body extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
-          ProfilePic(),
+           ProfilePic(),
           SizedBox(height: 20),
           ProfileMenu(
             text: "My Account",
@@ -20,22 +25,25 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "Notifications",
             icon: "assets/icons/Bell.svg",
-            press: () {},
+            press: () =>
+                Navigator.pushNamed(context, NotificationScreen.routeName),
           ),
           ProfileMenu(
             text: "Settings",
             icon: "assets/icons/Settings.svg",
-            press: () {},
+            press: () => Navigator.pushNamed(context, SettingsScreen.routeName),
           ),
           ProfileMenu(
-            text: "Help Center",
+            text: "Feedback",
             icon: "assets/icons/Question mark.svg",
-            press: () {},
+            press: () =>
+                Navigator.pushNamed(context, FeedBackScreen.routeName),
           ),
           ProfileMenu(
             text: "Log Out",
             icon: "assets/icons/Log out.svg",
-            press: () {},
+            press: () =>
+                Navigator.pushNamed(context, SignInPhoneScreen.routeName),
           ),
         ],
       ),

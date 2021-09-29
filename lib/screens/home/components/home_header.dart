@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/screens/cart/cart_screen.dart';
-
+import 'package:shop_app/screens/notifications/notifications.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -16,11 +16,13 @@ class HomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:
-          EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+          EdgeInsets.all(getProportionateScreenWidth(25),
+          ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text('Woomeniya', style: TextStyle(fontSize: 14.0,color: kPrimaryColor)),
+          Padding(padding: EdgeInsets.only(left: 10),child:Text('Woomeniya',
+              style: TextStyle(fontSize: 14.0, color: kPrimaryColor,fontWeight: FontWeight.w900))),
           SearchField(),
           IconBtnWithCounter(
             svgSrc: "assets/icons/Cart Icon.svg",
@@ -29,7 +31,7 @@ class HomeHeader extends StatelessWidget {
           IconBtnWithCounter(
             svgSrc: "assets/icons/Bell.svg",
             numOfitem: 3,
-            press: () {},
+            press: () => Navigator.pushNamed(context, NotificationScreen.routeName),
           ),
         ],
       ),
