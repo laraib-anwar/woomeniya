@@ -65,7 +65,7 @@ class Body extends StatelessWidget {
             BuyTwo(),
             SizedBox(height: getProportionateScreenWidth(30)),
             Budget(),
-            SizedBox(height: getProportionateScreenWidth(30)),
+            SizedBox(height: getProportionateScreenWidth(20)),
             Coupon(),
             SizedBox(height: getProportionateScreenWidth(30)),
             LocalVocal(),

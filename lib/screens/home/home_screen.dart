@@ -21,29 +21,30 @@ class HomeScreen extends StatelessWidget {
       flexibleSpace: HomeHeader(),
           
             bottom: TabBar(
+              indicatorColor: Colors.teal,
               tabs: [
                 Tab(
                   child: Text(
                     'Men',
-                    style: TextStyle(color: kPrimaryColor, fontSize: 11,
+                    style: TextStyle(color: Colors.black, fontSize: 11,
                         fontWeight: FontWeight.w900),
                   ),
                 ),  
                 Tab(
                   child: Text(
                     'Women',
-                    style: TextStyle(color: kPrimaryColor, fontSize: 11,
+                    style: TextStyle(color: Colors.black, fontSize: 11,
                         fontWeight: FontWeight.w900),
                   ),
                 ),
                 Tab(
                   child: Text(
                     'Accessories',
-                    style: TextStyle(color: kPrimaryColor, fontSize: 11,
+                    style: TextStyle(color: Colors.black, fontSize: 11,
                         fontWeight: FontWeight.w900),
                   ),
                 ),
-                Tab(child: Text('Footwear', style: TextStyle(color:kPrimaryColor, fontSize: 11,
+                Tab(child: Text('Footwear', style: TextStyle(color:Colors.black, fontSize: 11,
                         fontWeight: FontWeight.w900),),),
               ],
             ),

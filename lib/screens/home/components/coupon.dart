@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/home/components/coupon_slider.dart';
 import 'package:shop_app/size_config.dart';
 
 class Coupon extends StatelessWidget {
@@ -8,9 +9,13 @@ class Coupon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Builder(builder: (BuildContext context) {
-      return Column(children: [
-        Text(":DISCOVER MORE:", textAlign: TextAlign.center, style: TextStyle(fontSize:22, fontWeight: FontWeight.bold),),
+
+    return Stack(
+      alignment: Alignment(0.4, 0.4),
+      children: [
+        
+        Column(children: [
+        Text(":DISCOVER MORE:", textAlign: TextAlign.center, style: TextStyle(fontSize:30, fontWeight: FontWeight.bold),),
         Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.width,
@@ -18,42 +23,39 @@ class Coupon extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.black, borderRadius: BorderRadius.circular(20)),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   "Use coupon WMM 100 at checkout",
                   style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 ),
-                Text(
-                  "Get 100 off on your first offer",
-                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                        height: getProportionateScreenWidth(80),
-                        width: getProportionateScreenWidth(80),
-                        child: Image.asset(
-                            'assets/images/tshirt.png'),
-                            color: Colors.teal,),
-                    Container(
-                        height: getProportionateScreenWidth(80),
-                        width: getProportionateScreenWidth(80),
-                        child: Image.asset(
-                            'assets/images/shoes2.png'),
-                            color: Colors.pink),
-                    Container(
-                        height: getProportionateScreenWidth(80),
-                        width: getProportionateScreenWidth(80),
-                        child: Image.asset(
-                            'assets/images/ps4_console_blue_3.png'),
-                            color:Colors.deepPurple),
-                  ],
-                )
+                Column(children: [
+                  Container(width:200,child: Text("START EXPLORING", textAlign:TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold, color:Colors.white)),decoration: BoxDecoration(
+          color: Colors.teal, borderRadius: BorderRadius.circular(10),)),
+                   Text(
+                        "Get 100 off on your first offer",
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                ],)
+                
+                
+                
               ],
-            ))
-      ]);
-    });
+            )),
+            
+      ]),
+        CouponSlider(),
+      ],
+
+      
+      
+      );
+        
+      
+    
+    // return Builder(builder: (BuildContext context) {
+     
+    // });
   }
 }
