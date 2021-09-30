@@ -6,6 +6,7 @@ import 'package:shop_app/screens/details/details_screen.dart';
 import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/screens/login_success/login_success_screen.dart';
+import 'package:shop_app/screens/menview/men_view.dart';
 import 'package:shop_app/screens/notifications/notifications.dart';
 import 'package:shop_app/screens/otp/otp_screen.dart';
 import 'package:shop_app/screens/paymentssuccess/payment_success.dart';
@@ -39,6 +40,7 @@ final Map<String, WidgetBuilder> routes = {
   PaymentSuccessScreen.routeName: (context) => PaymentSuccessScreen(),
   SettingsScreen.routeName: (context) => SettingsScreen(),
   ReviewsScreen.routeName: (context) => ReviewsScreen(),
+  MenScreen.routeName: (context) => MenScreen(),
   
   CheckoutScreen.routeName: (context) => CheckoutScreen(),
   ProfileScreen.routeName: (context) => ProfileScreen(),

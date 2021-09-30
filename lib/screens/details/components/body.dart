@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/components/default_button.dart';
 import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/screens/details/components/add_to_cart.dart';
+import 'package:shop_app/screens/details/components/cart_counter.dart';
+import 'package:shop_app/screens/details/components/counter_with_fav_button.dart';
+import 'package:shop_app/screens/details/components/details_offer.dart';
+import 'package:shop_app/screens/details/components/product_size.dart';
 import 'package:shop_app/screens/reviews/reviews.dart';
 import 'package:shop_app/size_config.dart';
 
@@ -19,60 +24,89 @@ class Body extends StatelessWidget {
     return ListView(
       children: [
         ProductImages(product: product),
+        
+       
+        
         TopRoundedContainer(
           color: Colors.white,
           child: Column(
             children: [
               ProductDescription(
                 product: product,
-                pressOnSeeMore: () {},
+                // pressOnSeeMore: () {},
               ),
-              TopRoundedContainer(
-                color: Color(0xFFF6F7F9),
-                child: Column(
-                  children: [
-                    ColorDots(product: product),
-                    TopRoundedContainer(
-                      color: Colors.white,
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                          left: SizeConfig.screenWidth * 0.15,
-                          right: SizeConfig.screenWidth * 0.15,
-                          bottom: getProportionateScreenWidth(40),
-                          top: getProportionateScreenWidth(15),
-                        ),
-                        child: DefaultButton(
-                          text: "Add To Cart",
-                          press: () {},
-                        ),
-                      ),
-                    ),
-                    TopRoundedContainer(
-                      color: Colors.white,
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                          left: SizeConfig.screenWidth * 0.15,
-                          right: SizeConfig.screenWidth * 0.15,
-                          bottom: getProportionateScreenWidth(40),
-                          top: getProportionateScreenWidth(15),
-                        ),
-                        child: DefaultButton(
-                          text: "Add Review",
-                          press: () {
-                            Navigator.pushNamed(
-                                context, ReviewsScreen.routeName);
-                          },
-                        ),
-                      ),
-                    ),
+              Divider(thickness: 5.0,),
+              ColorDots(product: product),
+              SizedBox(height: 20 / 2),
+              Divider(
+                thickness: 5.0,
+              ),
+              ProductSize(),
+              Divider(
+                thickness: 5.0,
+              ),
+              DetailsOffer(),
+              Divider(
+                thickness: 5.0,
+              ),
+
+              Padding(padding: EdgeInsets.all( 15),
+              
+              child: CounterWithFavBtn(),),
+              
+              SizedBox(height: 20
+               / 2),
+              AddToCart(product: product),
+        //       TopRoundedContainer(
+        //         color: Color(0xFFF6F7F9),
+        //         child: Column(
+        //           children: [
+        //             ColorDots(product: product),
+        //             TopRoundedContainer(
+        //               color: Colors.white,
+        //               child: Padding(
+        //                 padding: EdgeInsets.only(
+        //                   left: SizeConfig.screenWidth * 0.15,
+        //                   right: SizeConfig.screenWidth * 0.15,
+        //                   bottom: getProportionateScreenWidth(40),
+        //                   top: getProportionateScreenWidth(15),
+        //                 ),
+                         
+        //               // child: SizedBox(height: 20 / 2),
+        //                 child: DefaultButton(
+        //                   text: "Add To Cart",
+        //                   press: () {
+        //                     CartCounter();
+        //                   },
+        //                 ),
+        //               ),
+        //             ),
+        //             TopRoundedContainer(
+        //               color: Colors.white,
+        //               child: Padding(
+        //                 padding: EdgeInsets.only(
+        //                   left: SizeConfig.screenWidth * 0.15,
+        //                   right: SizeConfig.screenWidth * 0.15,
+        //                   bottom: getProportionateScreenWidth(40),
+        //                   top: getProportionateScreenWidth(15),
+        //                 ),
+        //                 child: DefaultButton(
+        //                   text: "Add Review",
+        //                   press: () {
+        //                     Navigator.pushNamed(
+        //                         context, ReviewsScreen.routeName);
+        //                   },
+        //                 ),
+        //               ),
+        //             ),
                     
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
+        //           ],
+        //         ),
+        //       ),
+        //     ],
+        //   ),
+        // ),
       ],
-    );
+    ))]);
   }
 }

@@ -23,7 +23,7 @@ class _BodyState extends State<Body> {
     },
     
     {
-      "text": "We show the easy way to shop. \nJust stay at home with us",
+      "text": "Fashion for you.",
       "image": "assets/images/splash_3.png"
     },
   ];

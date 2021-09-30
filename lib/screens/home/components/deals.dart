@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:shop_app/screens/menview/men_view.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -30,37 +31,39 @@ class Deals extends StatelessWidget {
             children: [
               SpecialOfferCard(
                 icon: "assets/icons/Lock.svg",
-                text: "flash deal",
-                press: () {},
+                text: "Best offers",
+                press: () {
+                  Navigator.pushNamed(context, MenScreen.routeName);
+                },
                 col: Colors.cyan,
               ),
               SpecialOfferCard(
                 icon: "assets/icons/Phone.svg",
-                text: "flash deal",
+                text: "Buy 2 get 1",
                 press: () {},
                 col: Colors.yellow,
               ),
               SpecialOfferCard(
                 icon: "assets/icons/FSuccess.svg",
-                text: "flash deal",
+                text: "Plain T shirts",
                 press: () {},
                 col: Colors.indigo,
               ),
               SpecialOfferCard(
                 icon: "assets/icons/Flash Icon.svg",
-                text: "flash deal",
+                text: "Health and essentail",
                 press: () {},
                 col: Colors.pink,
               ),
               SpecialOfferCard(
                 icon: "assets/icons/Flash Icon.svg",
-                text: "flash deal",
+                text: "Colour of month",
                 press: () {},
                 col: Colors.purple,
               ),
               SpecialOfferCard(
                 icon: "assets/icons/Heart Icon.svg",
-                text: "flash deal",
+                text: "Vote for design",
                 press: () {},
                 col: Colors.grey,
               ),
@@ -75,18 +78,6 @@ class Deals extends StatelessWidget {
                 text: "flash deal",
                 press: () {},
                 col: Colors.green,
-              ),
-              SpecialOfferCard(
-                icon: "assets/icons/Flash Icon.svg",
-                text: "flash deal",
-                press: () {},
-                col: Colors.blue,
-              ),
-              SpecialOfferCard(
-                icon: "assets/icons/Bell.svg",
-                text: "flash deal",
-                press: () {},
-                col: Colors.red,
               ),
               SizedBox(width: getProportionateScreenWidth(10)),
             ],
@@ -117,13 +108,13 @@ class SpecialOfferCard extends StatelessWidget {
         child: GestureDetector(
           onTap: press,
           child: SizedBox(
-            width: getProportionateScreenWidth(100),
+            width: getProportionateScreenWidth(150),
             child: Column(
               children: [
                 Container(
                   padding: EdgeInsets.all(getProportionateScreenWidth(15)),
-                  height: getProportionateScreenWidth(55),
-                  width: getProportionateScreenWidth(75),
+                  height: getProportionateScreenWidth(120),
+                  width: getProportionateScreenWidth(250),
                   decoration: BoxDecoration(
                     color: col,
                     borderRadius: BorderRadius.circular(10),

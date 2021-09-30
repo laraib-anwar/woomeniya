@@ -20,7 +20,11 @@ class ColorDots extends StatelessWidget {
     return Padding(
       padding:
           EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-      child: Row(
+      child: Column(children: [
+        Text("Choose your color",
+              style:
+                  TextStyle(color: Colors.teal, fontWeight: FontWeight.w500)),
+        Row(
         children: [
           ...List.generate(
             product.colors.length,
@@ -41,8 +45,8 @@ class ColorDots extends StatelessWidget {
             press: () {},
           ),
         ],
-      ),
-    );
+      ),]
+    ));
   }
 }
 
