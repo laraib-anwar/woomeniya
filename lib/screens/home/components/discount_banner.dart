@@ -53,15 +53,23 @@ class _DiscountBannerState extends State<DiscountBanner> {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(
-                      width: 400,
-                      margin: EdgeInsets.symmetric(horizontal: 1.0),
-                      decoration: BoxDecoration(
-                          color: Colors.green[50],
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Image.asset(
-                        i,
-                        fit: BoxFit.cover,
-                      ));
+                    margin: EdgeInsets.symmetric(horizontal: 2.0),
+                    child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        // margin: EdgeInsets.symmetric(horizontal: 1.0),
+                        // decoration: BoxDecoration(
+                        //     color: Colors.green[50],
+                        //     borderRadius: BorderRadius.circular(20)),
+                        
+                        child: Image.asset(
+                          
+                          i,
+                          width:400,
+                          
+                          
+                          fit: BoxFit.cover,
+                        )),
+                  );
                 },
               );
             }).toList(),
