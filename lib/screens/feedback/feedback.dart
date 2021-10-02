@@ -10,7 +10,6 @@ class FeedBackScreen extends StatefulWidget {
 
 class _FeedBackScreenState extends State<FeedBackScreen> {
   List<bool> isTypeSelected = [false, false, false, true, true];
-  
 
   @override
   Widget build(BuildContext context) {
@@ -24,96 +23,101 @@ class _FeedBackScreenState extends State<FeedBackScreen> {
           "Feedback",
           style: TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold),
         ),
-       
       ),
-      body: Padding(
-        padding: EdgeInsets.all(
-          getProportionateScreenWidth(20.0),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 10.0,
+      body: SingleChildScrollView(
+        child: Container(
+           height: MediaQuery.of(context).size.height,
+          child: Padding(
+            padding: EdgeInsets.all(
+              getProportionateScreenWidth(20.0),
             ),
-            Text(
-              "Please select the type of the feedback",
-              style: TextStyle(
-                color: kPrimaryColor,
-              ),
-            ),
-            SizedBox(height: getProportionateScreenWidth(25.0)),
-            GestureDetector(
-              child: buildCheckItem(
-                  title: "Login trouble", isSelected: isTypeSelected[0]),
-              onTap: () {
-                setState(() {
-                  isTypeSelected[0] = !isTypeSelected[0];
-                });
-              },
-            ),
-            GestureDetector(
-              child: buildCheckItem(
-                  title: "Phone number related", isSelected: isTypeSelected[1]),
-              onTap: () {
-                setState(() {
-                  isTypeSelected[1] = !isTypeSelected[1];
-                });
-              },
-            ),
-            GestureDetector(
-              child: buildCheckItem(
-                  title: "Personal profile", isSelected: isTypeSelected[2]),
-              onTap: () {
-                setState(() {
-                  isTypeSelected[2] = !isTypeSelected[2];
-                });
-              },
-            ),
-            GestureDetector(
-              child: buildCheckItem(
-                  title: "Other issues", isSelected: isTypeSelected[3]),
-              onTap: () {
-                setState(() {
-                  isTypeSelected[3] = !isTypeSelected[3];
-                });
-              },
-            ),
-            GestureDetector(
-              child: buildCheckItem(
-                  title: "Suggestions", isSelected: isTypeSelected[4]),
-              onTap: () {
-                setState(() {
-                  isTypeSelected[4] = !isTypeSelected[4];
-                });
-              },
-            ),
-            SizedBox(
-              height: getProportionateScreenWidth(20.0),
-            ),
-            
-            buildFeedbackForm(),
-            SizedBox(height: getProportionateScreenWidth(20.0),
-            ),
-            buildNumberField(),
-            Spacer(),
-            Row(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                FlatButton(
-                  onPressed: () {},
-                  child: Text(
-                    "SUBMIT",
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                  color: Color(0xFFE5E5E5),
-                  padding: EdgeInsets.all(
-                    getProportionateScreenWidth(16.0),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Text(
+                  "Please select the type of the feedback",
+                  style: TextStyle(
+                    color: kPrimaryColor,
                   ),
                 ),
+                SizedBox(height: getProportionateScreenWidth(25.0)),
+                GestureDetector(
+                  child: buildCheckItem(
+                      title: "Login trouble", isSelected: isTypeSelected[0]),
+                  onTap: () {
+                    setState(() {
+                      isTypeSelected[0] = !isTypeSelected[0];
+                    });
+                  },
+                ),
+                GestureDetector(
+                  child: buildCheckItem(
+                      title: "Phone number related",
+                      isSelected: isTypeSelected[1]),
+                  onTap: () {
+                    setState(() {
+                      isTypeSelected[1] = !isTypeSelected[1];
+                    });
+                  },
+                ),
+                GestureDetector(
+                  child: buildCheckItem(
+                      title: "Personal profile", isSelected: isTypeSelected[2]),
+                  onTap: () {
+                    setState(() {
+                      isTypeSelected[2] = !isTypeSelected[2];
+                    });
+                  },
+                ),
+                GestureDetector(
+                  child: buildCheckItem(
+                      title: "Other issues", isSelected: isTypeSelected[3]),
+                  onTap: () {
+                    setState(() {
+                      isTypeSelected[3] = !isTypeSelected[3];
+                    });
+                  },
+                ),
+                GestureDetector(
+                  child: buildCheckItem(
+                      title: "Suggestions", isSelected: isTypeSelected[4]),
+                  onTap: () {
+                    setState(() {
+                      isTypeSelected[4] = !isTypeSelected[4];
+                    });
+                  },
+                ),
+                SizedBox(
+                  height: getProportionateScreenWidth(20.0),
+                ),
+                buildFeedbackForm(),
+                SizedBox(
+                  height: getProportionateScreenWidth(20.0),
+                ),
+                buildNumberField(),
+                Spacer(),
+                Row(
+                  children: [
+                    FlatButton(
+                      onPressed: () {},
+                      child: Text(
+                        "SUBMIT",
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                      color: Color(0xFFE5E5E5),
+                      padding: EdgeInsets.all(
+                        getProportionateScreenWidth(16.0),
+                      ),
+                    ),
+                  ],
+                )
               ],
-            )
-          ],
+            ),
+          ),
         ),
       ),
     );
@@ -205,7 +209,9 @@ class _FeedBackScreenState extends State<FeedBackScreen> {
                   ),
                 ),
               ),
-              padding: EdgeInsets.all(getProportionateScreenWidth(8.0),),
+              padding: EdgeInsets.all(
+                getProportionateScreenWidth(8.0),
+              ),
               child: Row(
                 children: [
                   Container(
@@ -214,7 +220,9 @@ class _FeedBackScreenState extends State<FeedBackScreen> {
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(getProportionateScreenWidth(8.0),),
+                      padding: EdgeInsets.all(
+                        getProportionateScreenWidth(8.0),
+                      ),
                       child: Icon(
                         Icons.add,
                         color: Color(0xFFA5A5A5),
@@ -248,7 +256,9 @@ class _FeedBackScreenState extends State<FeedBackScreen> {
             isSelected ? Icons.check_circle : Icons.circle,
             color: isSelected ? Colors.blue : Colors.grey,
           ),
-          SizedBox(width: getProportionateScreenWidth(10.0),),
+          SizedBox(
+            width: getProportionateScreenWidth(10.0),
+          ),
           Text(
             title,
             style: TextStyle(

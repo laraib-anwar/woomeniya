@@ -77,9 +77,9 @@ class _ExploreNowState extends State<ExploreNow> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: map<Widget>(imgList, (index, url) {
               return Container(
-                width: getProportionateScreenWidth(10),
-                height: getProportionateScreenWidth(10),
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+                width: getProportionateScreenWidth(5),
+                height: getProportionateScreenWidth(5),
+                margin: EdgeInsets.symmetric(vertical: 5, horizontal: 2.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: _current == index ? Colors.black : Colors.grey,

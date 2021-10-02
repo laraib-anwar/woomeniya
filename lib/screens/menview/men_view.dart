@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:shop_app/constants.dart';
-import 'package:shop_app/screens/home/components/body.dart';
+import 'package:shop_app/screens/menview/constants.dart';
+import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/screens/menview/components/body.dart';
 
 class MenScreen extends StatelessWidget {
+   final List<Product> product;
   static String routeName = '/men_view';
+
+  const MenScreen({Key? key, required this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: Body(),
+      body: Body(product: demoProducts,),
     );
   }
 

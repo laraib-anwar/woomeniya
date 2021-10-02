@@ -54,13 +54,16 @@ class HomeScreen extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
+             DrawerHeader(
               decoration: BoxDecoration(
                 color: kPrimaryColor,
               ),
-              child: Text('Woomeniya',
+              child: Row(children: [
+                Image(image: AssetImage("assets/images/woomeniya_logo.png"),height:40),
+                    Text('oomeniya',
                   style: TextStyle(fontSize: 20.0, color: kSecondaryColor,
                           fontWeight: FontWeight.w900)),
+              ]),
             ),
             ListTile(
               title: const Text('Logout',style: TextStyle(fontSize: 16.0, color: Colors.black,

@@ -40,7 +40,7 @@ final Map<String, WidgetBuilder> routes = {
   PaymentSuccessScreen.routeName: (context) => PaymentSuccessScreen(),
   SettingsScreen.routeName: (context) => SettingsScreen(),
   ReviewsScreen.routeName: (context) => ReviewsScreen(),
-  MenScreen.routeName: (context) => MenScreen(),
+  MenScreen.routeName: (context) => MenScreen(product: [],),
   
   CheckoutScreen.routeName: (context) => CheckoutScreen(),
   ProfileScreen.routeName: (context) => ProfileScreen(),

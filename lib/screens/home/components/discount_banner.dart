@@ -15,10 +15,11 @@ class DiscountBanner extends StatefulWidget {
 class _DiscountBannerState extends State<DiscountBanner> {
   int _current = 0;
   List imgList = [
-    "assets/images/ps4_console_white_1.png",
-    "assets/images/Image Popular Product 3.png",
-    "assets/images/glap.png",
-    "assets/images/shoes2.png"
+    "assets/images/banner_1.png",
+    "assets/images/banner_2.png",
+    "assets/images/banner_3.png",
+    "assets/images/banner_4.png",
+    "assets/images/banner_5.png"
   ];
   List<T> map<T>(List list, Function handler) {
     List<T> result = [];
@@ -37,7 +38,7 @@ class _DiscountBannerState extends State<DiscountBanner> {
             children: [
           CarouselSlider(
             options: CarouselOptions(
-              height: 300.0,
+              height: 400.0,
               autoPlay: true,
               initialPage: 0,
               autoPlayAnimationDuration: Duration(milliseconds: 800),
@@ -52,11 +53,11 @@ class _DiscountBannerState extends State<DiscountBanner> {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(
-                      width: MediaQuery.of(context).size.width,
+                      width: 400,
                       margin: EdgeInsets.symmetric(horizontal: 1.0),
                       decoration: BoxDecoration(
                           color: Colors.green[50],
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(20)),
                       child: Image.asset(
                         i,
                         fit: BoxFit.cover,
@@ -72,9 +73,9 @@ class _DiscountBannerState extends State<DiscountBanner> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: map<Widget>(imgList, (index, url) {
               return Container(
-                width: getProportionateScreenWidth(10),
-                height: getProportionateScreenWidth(10),
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+                width: getProportionateScreenWidth(5),
+                height: getProportionateScreenWidth(5),
+                margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 2.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: _current == index ? Colors.black : Colors.grey,

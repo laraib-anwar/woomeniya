@@ -15,23 +15,24 @@ class SplashContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Spacer(),
-        Text(
-          "WOOMENIYA",
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(36),
-            color: kPrimaryColor,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        // Spacer(),
+        Image(image: AssetImage("assets/images/woomeniya_splash.png"),height: 300,),
+        // Text(
+        //   "WOOMENIYA",
+        //   style: TextStyle(
+        //     fontSize: getProportionateScreenWidth(36),
+        //     color: kPrimaryColor,
+        //     fontWeight: FontWeight.bold,
+        //   ),
+        // ),
         Text(
           text!,
           textAlign: TextAlign.center,
         ),
-        Spacer(flex: 2),
+        Spacer(flex: 1),
         Image.asset(
           image!,
-          height: getProportionateScreenHeight(265),
+          height: getProportionateScreenHeight(220),
           width: getProportionateScreenWidth(235),
         ),
       ],

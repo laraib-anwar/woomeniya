@@ -21,8 +21,14 @@ class HomeHeader extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Padding(padding: EdgeInsets.only(left: 10),child:Text('Woomeniya',
-              style: TextStyle(fontSize: 14.0, color: kPrimaryColor,fontWeight: FontWeight.w900))),
+          Padding(padding: EdgeInsets.only(left: 10),child:Row(
+            children:[
+                Image(
+                    image: AssetImage("assets/images/woomeniya_logo.png"),
+                    height: 20),
+                Text('oomeniya',
+                style: TextStyle(fontSize: 14.0, color: kPrimaryColor,fontWeight: FontWeight.w900)),]
+          )),
           SearchField(),
           IconBtnWithCounter(
             svgSrc: "assets/icons/Cart Icon.svg",

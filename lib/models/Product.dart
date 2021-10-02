@@ -103,6 +103,78 @@ List<Product> demoProducts = [
     rating: 4.1,
     isFavourite: true,
   ),
+  Product(
+    id: 5,
+    image: "assets/images/glap.png",
+    images: [
+      "assets/images/wireless headset.png",
+    ],
+    colors: [
+      Color(0xFFF6625E),
+      Color(0xFF836DB8),
+      Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Logitech Head",
+    price: 20.20,
+    description: description,
+    rating: 4.1,
+    isFavourite: true,
+  ),
+  Product(
+    id: 6,
+    image: "assets/images/woomeniya_3.jpg",
+    images: [
+      "assets/images/wireless headset.png",
+    ],
+    colors: [
+      Color(0xFFF6625E),
+      Color(0xFF836DB8),
+      Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Logitech Head",
+    price: 20.20,
+    description: description,
+    rating: 4.1,
+    isFavourite: true,
+  ),
+  Product(
+    id: 7,
+    image: "assets/images/woomeniya_2.jpg",
+    images: [
+      "assets/images/wireless headset.png",
+    ],
+    colors: [
+      Color(0xFFF6625E),
+      Color(0xFF836DB8),
+      Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Logitech Head",
+    price: 20.20,
+    description: description,
+    rating: 4.1,
+    isFavourite: true,
+  ),
+  Product(
+    id: 8,
+    image: "assets/images/woomeniya_1.jpg",
+    images: [
+      "assets/images/wireless headset.png",
+    ],
+    colors: [
+      Color(0xFFF6625E),
+      Color(0xFF836DB8),
+      Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Logitech Head",
+    price: 20.20,
+    description: description,
+    rating: 4.1,
+    isFavourite: true,
+  ),
 ];
 
 const String description =

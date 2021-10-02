@@ -15,20 +15,25 @@ class UrbanMembership extends StatelessWidget {
       
                     Container(
                       
-                      child: Text('Urban Memebreship',
-                      textAlign: TextAlign.center,style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w800,
-              fontFamily: 'Roboto',
-              letterSpacing: 0.5,
-              fontSize: 18,
-              height: 2,
-            )),
+                      
+                       //Text('Urban Memebreship',
+            //           textAlign: TextAlign.center,style: TextStyle(
+            //   color: Colors.white,
+            //   fontWeight: FontWeight.w800,
+            //   fontFamily: 'Roboto',
+            //   letterSpacing: 0.5,
+            //   fontSize: 18,
+            //   height: 2,
+            // )),
                 width: MediaQuery.of(context).size.width,
                 height:getProportionateScreenWidth(80),
                 margin: EdgeInsets.symmetric(horizontal: 5.0),
                 decoration: BoxDecoration(
-                    color: kPrimaryColor,
+                    image: DecorationImage(
+          image: AssetImage(
+              'assets/images/urban_membership.png'),
+          fit: BoxFit.fill,
+        ),
                     borderRadius: BorderRadius.circular(10)),
                 )
       

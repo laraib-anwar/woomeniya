@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shop_app/models/Product.dart';
 
-import '../../../constants.dart';
+
 import '../../../size_config.dart';
 
 class ProductDescription extends StatelessWidget {
@@ -23,11 +23,43 @@ class ProductDescription extends StatelessWidget {
         Padding(
           padding:
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-          child: Text(
-            product.title,
-            style: Theme.of(context).textTheme.headline6,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children:[
+              
+                Text(
+                product.title,
+                style: Theme.of(context).textTheme.headline6,
+              ),
+              Image(
+                  image: AssetImage("assets/images/made_in_india.jpg"),
+                  height: 50),
+                  
+            ] ,
           ),
+         
         ),
+        SizedBox(height:10),
+        Padding(padding: EdgeInsets.only(left:30),child: Container(
+              width: MediaQuery.of(context).size.width / 2,
+              height: getProportionateScreenWidth(30),
+              child: Padding(padding:EdgeInsets.all(5.0),
+                child: Text('Verified Purchaser',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w800,
+                      fontFamily: 'Roboto',
+                      letterSpacing: 0.5,
+                      fontSize: 20,
+                      height: 1,
+                    )),
+              ),
+              decoration: BoxDecoration(
+                  color: Colors.teal, borderRadius: BorderRadius.circular(10))),
+        ),
+         
+      SizedBox(height: 10),
         Align(
           alignment: Alignment.centerRight,
           child: Container(
