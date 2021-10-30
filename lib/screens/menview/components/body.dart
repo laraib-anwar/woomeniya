@@ -19,36 +19,31 @@ class Body extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              "Men",
-              style: Theme.of(context)
-                  .textTheme
-                  .headline5
-                  
-            ),
+            child: Text("Men", style: Theme.of(context).textTheme.headline5),
           ),
           // Categories(),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: GridView.builder(
-                  itemCount: product.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 20,
-                    childAspectRatio: 0.60,
-                  ),
-                  itemBuilder: (context, index) => ItemCard(
-                        product: product[index],
-                        // press: () => Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //       builder: (context) => DetailsScreen(
-                        //         product: product[index],
-                        //       ),
-                        //     )),
-                      )),
+                itemCount: product.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 20,
+                  childAspectRatio: 0.60,
+                ),
+                itemBuilder: (context, index) => ItemCard(
+                  product: product[index],
+                  // press: () => Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //       builder: (context) => DetailsScreen(
+                  //         product: product[index],
+                  //       ),
+                  //     )),
+                ),
+              ),
             ),
           ),
         ],

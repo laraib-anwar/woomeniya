@@ -16,7 +16,10 @@ class SplashContent extends StatelessWidget {
     return Column(
       children: <Widget>[
         // Spacer(),
-        Image(image: AssetImage("assets/images/woomeniya_splash.png"),height: 300,),
+        Image(
+          image: AssetImage("assets/images/woomeniya_splash.png"),
+          height: 280,
+        ),
         // Text(
         //   "WOOMENIYA",
         //   style: TextStyle(
