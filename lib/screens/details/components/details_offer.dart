@@ -16,7 +16,7 @@ class DetailsOffer extends StatelessWidget {
         height: getProportionateScreenWidth(80),
         margin: EdgeInsets.symmetric(horizontal: 5.0),
         decoration: BoxDecoration(
-            color: kSecondaryColor, borderRadius: BorderRadius.circular(10)),
+            color: Colors.grey[200], borderRadius: BorderRadius.circular(10)),
        
         child:(Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,

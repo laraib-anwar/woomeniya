@@ -16,7 +16,7 @@ class HomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:
-          EdgeInsets.all(getProportionateScreenWidth(25),
+          EdgeInsets.all(getProportionateScreenWidth(35),
           ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -25,9 +25,7 @@ class HomeHeader extends StatelessWidget {
             children:[
                 Image(
                     image: AssetImage("assets/images/woomeniya_logo.png"),
-                    height: 20),
-                Text('oomeniya',
-                style: TextStyle(fontSize: 14.0, color: kPrimaryColor,fontWeight: FontWeight.w900)),]
+                    height: 20),]
           )),
           SearchField(),
           IconBtnWithCounter(

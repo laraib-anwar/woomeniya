@@ -40,7 +40,7 @@ class _ExploreNowState extends State<ExploreNow> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children:[CarouselSlider(
       options: CarouselOptions(
-        height: 300.0,
+        height: 400.0,
         autoPlay: true,
         initialPage: 0,
         autoPlayAnimationDuration: Duration(milliseconds: 800),
@@ -55,17 +55,17 @@ class _ExploreNowState extends State<ExploreNow> {
         return Builder(
           builder: (BuildContext context) {
             return Container(
-              
-                width: MediaQuery.of(context).size.width,
-                margin: EdgeInsets.symmetric(horizontal: 1.0),
-                decoration: BoxDecoration(
-                    color: Colors.purple[100],
-                    borderRadius: BorderRadius.circular(10)),
-                child: Image.asset(
-                  i,
-                  fit: BoxFit.cover,
-                 
-                ));
+                    margin: EdgeInsets.symmetric(horizontal: 2.0),
+                    child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                      
+
+                        child: Image.asset(
+                          i,
+                          width: 400,
+                          fit: BoxFit.cover,
+                        )),
+                  );
           },
         );
       }).toList(),

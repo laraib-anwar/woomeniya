@@ -37,7 +37,7 @@ class Body extends StatelessWidget {
                     crossAxisCount: 2,
                     mainAxisSpacing: 20,
                     crossAxisSpacing: 20,
-                    childAspectRatio: 0.75,
+                    childAspectRatio: 0.60,
                   ),
                   itemBuilder: (context, index) => ItemCard(
                         product: product[index],

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/home/components/bottom_wear.dart';
 import 'package:shop_app/screens/home/components/design_vote.dart';
 import 'package:shop_app/screens/home/components/explore_now.dart';
 import 'package:shop_app/screens/home/components/feature_brand.dart';
+import 'package:shop_app/screens/home/components/made_in_india.dart';
+import 'package:shop_app/screens/home/components/top_wear.dart';
 import 'package:shop_app/screens/home/components/trending.dart';
 import 'package:shop_app/screens/home/components/message_community.dart';
 import 'package:shop_app/screens/home/components/biggest_offer.dart';
@@ -56,6 +59,10 @@ class Body extends StatelessWidget {
             SizedBox(height: getProportionateScreenWidth(30)),
             FeatureBrand(),
             SizedBox(height: getProportionateScreenWidth(30)),
+            TopWear(),
+            SizedBox(height: getProportionateScreenWidth(30)),
+            BottomWear(),
+            SizedBox(height: getProportionateScreenWidth(30)),
             Trending(),
             SizedBox(height: getProportionateScreenWidth(30)),
             MessageCommunity(),
@@ -73,6 +80,8 @@ class Body extends StatelessWidget {
             BestOffer(),
             SizedBox(height: getProportionateScreenWidth(30)),
             LocalProduction(),
+            SizedBox(height: getProportionateScreenWidth(20)),
+            MadeInIndia(),
             SizedBox(height: getProportionateScreenWidth(30)),
             MonthlyStyle(),
             SizedBox(height: getProportionateScreenWidth(30)),

@@ -59,7 +59,7 @@ class FeatureBrand extends StatelessWidget {
                     color: Colors.blue[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Image.asset('assets/images/tshirt.png')),
+                  child: Image.asset('assets/images/shirt.jpg')),
             ],
           ),
           Column(
@@ -71,7 +71,7 @@ class FeatureBrand extends StatelessWidget {
                     color: Colors.red[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Image.asset('assets/images/shoes2.png')),
+                  child: Image.asset('assets/images/shoes.jpg')),
             ],
           ),
         ],

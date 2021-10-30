@@ -15,9 +15,9 @@ class BestOffer extends StatefulWidget {
 class _BestOfferState extends State<BestOffer> {
   int _current = 0;
   List imgList = [
-    "assets/images/ps4_console_white_1.png",
-    "assets/images/Image Popular Product 3.png",
-    "assets/images/glap.png",
+    "assets/images/denims.jpg",
+    "assets/images/ethnic.jpg",
+    "assets/images/half_sleeve_t_shirt.jpg",
     "assets/images/shoes2.png"
   ];
   List<T> map<T>(List list, Function handler) {
@@ -43,7 +43,7 @@ class _BestOfferState extends State<BestOffer> {
                   fontWeight: FontWeight.bold)),
           CarouselSlider(
             options: CarouselOptions(
-              height: 250.0,
+              height: 400.0,
               autoPlay: true,
               initialPage: 0,
               autoPlayAnimationDuration: Duration(milliseconds: 800),
@@ -58,15 +58,17 @@ class _BestOfferState extends State<BestOffer> {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(
-                      width: MediaQuery.of(context).size.width,
-                      margin: EdgeInsets.symmetric(horizontal: 5.0),
-                      decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Image.asset(
-                        i,
-                        fit: BoxFit.cover,
-                      ));
+                    margin: EdgeInsets.symmetric(horizontal: 2.0),
+                    child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                     
+
+                        child: Image.asset(
+                          i,
+                          width: 400,
+                          fit: BoxFit.cover,
+                        )),
+                  );
                 },
               );
             }).toList(),
