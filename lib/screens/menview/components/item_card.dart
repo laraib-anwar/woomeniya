@@ -4,15 +4,12 @@ import 'package:shop_app/size_config.dart';
 
 import '../constants.dart';
 
-
-
 class ItemCard extends StatelessWidget {
   final Product product;
   //final Function press;
   const ItemCard({
     Key? key,
     required this.product,
-     
   }) : super(key: key);
 
   @override
@@ -22,22 +19,20 @@ class ItemCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Expanded(
-            child: Container(
-              
-              padding: EdgeInsets.all(20),
-              // For  demo we use fixed height  and width
-              // Now we dont need them
-              height: 220,
-              width: 220,
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: Hero(
-                tag: "${product.id}",
-                child: Image.asset(product.image),
-              ),
+          Container(
+            padding: EdgeInsets.all(20),
+            // For  demo we use fixed height  and width
+            // Now we dont need them
+            decoration: BoxDecoration(
+              color: Colors.grey[200],
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Hero(
+              tag: "${product.id}",
+              child: Container(
+                  height: MediaQuery.of(context).size.width * 0.4,
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  child: Image.asset(product.image)),
             ),
           ),
           Padding(
