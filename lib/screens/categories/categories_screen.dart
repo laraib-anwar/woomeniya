@@ -10,7 +10,8 @@ import 'package:shop_app/screens/sign_in_phone/sign_in_phone_screen.dart';
 
 import 'components/body.dart';
 import 'components/home_header.dart';
-import 'components_accessories/body_accessories.dart';
+import 'components_accessories/body.dart';
+
 
 class CategoriesScreen extends StatelessWidget {
   static String routeName = "/categories";
@@ -67,6 +68,31 @@ class CategoriesScreen extends StatelessWidget {
     Category(id: 9, name: "Regional", subCategories: [
       Subcategory(id: 1, name: "Jogger", imageUrl: "assets/images/jogger.jpg"),
     ]),
+  ];
+
+  List<Category> categories_accessories = [
+    Category(id: 1, name: "Watches", subCategories: [
+      Subcategory(id: 1, name: "Watch1", imageUrl: "assets/images/watch.jpg"),
+      Subcategory(
+          id: 1, name: "Watch2", imageUrl: "assets/images/watch_2.jpg"),
+    ]),
+    Category(id: 2, name: "Phones", subCategories: [
+      Subcategory(id: 1, name: "Jogger", imageUrl: "assets/images/phone.jpg"),
+      
+    ]),
+    Category(id: 3, name: "Gadgets", subCategories: [
+      Subcategory(id: 1, name: "Game1", imageUrl: "assets/images/ps4_console_blue_1.png"),
+      Subcategory(
+          id: 1, name: "Game2", imageUrl: "assets/images/ps4_console_blue_2.png"),
+      Subcategory(id: 1, name: "Game3", imageUrl: "assets/images/ps4_console_blue_3.png"),
+      Subcategory(
+          id: 1,
+          name: "Game4",
+          imageUrl: "assets/images/ps4_console_blue_4.png")
+
+    ]),
+  
+  
   ];
   @override
   Widget build(BuildContext context) {
@@ -207,7 +233,9 @@ class CategoriesScreen extends StatelessWidget {
             Body(
               categories: categories,
             ),
-            BodyAccessories(),
+            BodyAccessories(
+              categories: categories_accessories,
+            ),
           ]),
           bottomNavigationBar:
               CustomBottomNavBar(selectedMenu: MenuState.categories),
