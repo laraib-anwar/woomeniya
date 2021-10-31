@@ -52,7 +52,7 @@ class CategoriesScreen extends StatelessWidget {
     ]),
     Category(id: 6, name: "Innerwear", subCategories: [
       Subcategory(id: 1, name: "Jogger", imageUrl: "assets/images/jogger.jpg"),
-      Subcategory(id: 1, name: "", imageUrl: "assets/images/jacket.jpg")
+      Subcategory(id: 1, name: "Jacket", imageUrl: "assets/images/jacket.jpg")
     ]),
     Category(id: 7, name: "New Arrivals", subCategories: [
       Subcategory(id: 1, name: "Jogger", imageUrl: "assets/images/jogger.jpg"),
@@ -167,11 +167,13 @@ class CategoriesScreen extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  title: const Text('About',
-                      style: TextStyle(
-                          fontSize: 16.0,
-                          color: Colors.black,
-                          fontWeight: FontWeight.w400)),
+                  title: const Text(
+                    'About',
+                    style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w400),
+                  ),
                   onTap: () {
                     // Update the state of the app.
                     // ...
