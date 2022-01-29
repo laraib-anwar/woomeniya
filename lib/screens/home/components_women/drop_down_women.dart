@@ -15,28 +15,27 @@ class _DropDownState extends State<DropDown> {
     'Accessories',
     'Footwear',
     'Health Gear'
-    'Printed T shirts for men'
+        'Printed T shirts for men'
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              DropdownButton(
-                value: dropdownvalue,
-                icon: Icon(Icons.keyboard_arrow_down),
-                items: items.map((String items) {
-                  return DropdownMenuItem(value: items, child: Text(items));
-                }).toList(),
-                
-              ),
-            ],
-          ),
+    return Container(
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            DropdownButton(
+              onChanged: (String value) {},
+              value: dropdownvalue,
+              icon: Icon(Icons.keyboard_arrow_down),
+              items: items.map((String items) {
+                return DropdownMenuItem(value: items, child: Text(items));
+              }).toList(),
+            ),
+          ],
         ),
-      
+      ),
     );
   }
 }

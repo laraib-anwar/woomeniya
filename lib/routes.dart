@@ -47,10 +47,9 @@ final Map<String, WidgetBuilder> routes = {
   WomenScreen.routeName: (context) => WomenScreen(
         product: [],
       ),
-      AccessoriesScreen.routeName: (context) => AccessoriesScreen(
-        product: [],
-      ),
-  
+  AccessoriesScreen.routeName: (context) => AccessoriesScreen(
+    product: [],
+  ),
   CheckoutScreen.routeName: (context) => CheckoutScreen(),
   ProfileScreen.routeName: (context) => ProfileScreen(),
   CategoriesScreen.routeName: (context) => CategoriesScreen(),

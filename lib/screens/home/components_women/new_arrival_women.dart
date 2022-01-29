@@ -6,7 +6,7 @@ import '../../../size_config.dart';
 
 class NewArrival extends StatelessWidget {
   const NewArrival({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

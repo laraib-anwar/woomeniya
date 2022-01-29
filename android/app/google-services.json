@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "654514974217",
+    "project_id": "woomeniya-firebase",
+    "storage_bucket": "woomeniya-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654514974217:android:b9e6245483049cf6bb52d8",
+        "android_client_info": {
+          "package_name": "com.woomeniya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654514974217-b57ii17p5149pepf4qqnjng3irp8i06o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.woomeniya",
+            "certificate_hash": "c03e5dedfac210414d222226e8a3c6da3e462a3c"
+          }
+        },
+        {
+          "client_id": "654514974217-nn4et4unb1oa39fkdesudn0tfgdubk7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDEFCZbv_3M-RjLejaGXXcN4RimIOOsL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654514974217-nn4et4unb1oa39fkdesudn0tfgdubk7c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

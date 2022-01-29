@@ -5,7 +5,7 @@ import '../../../size_config.dart';
 
 class BottomWear extends StatelessWidget {
   const BottomWear({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

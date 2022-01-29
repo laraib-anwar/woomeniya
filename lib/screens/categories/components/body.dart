@@ -6,7 +6,7 @@ import 'package:shop_app/screens/categories/components/subcategory_grid.dart';
 
 class Body extends StatefulWidget {
   final List<Category> categories;
-  Body({Key? key, required this.categories}) : super(key: key);
+  Body({Key key, this.categories}) : super(key: key);
 
   @override
   State<Body> createState() => _BodyState();

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'Product.dart';
-import 'Product.dart';
+import 'TestProduct.dart';
+import 'TestProduct.dart';
 
 class Cart {
-  final Product product;
+  final TestProduct product;
   final int numOfItem;
 
-  Cart({required this.product, required this.numOfItem});
+  Cart({this.product, this.numOfItem});
 }
 
 // Demo data for our cart

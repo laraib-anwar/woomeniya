@@ -2,7 +2,7 @@ class Brand {
   int id;
   String name;
   String brandLogoUrl;
-  Brand({required this.id, required this.name, required this.brandLogoUrl});
+  Brand({this.id, this.name, this.brandLogoUrl});
   Brand.fromJson(Map<String, dynamic> parsedJson)
       : id = parsedJson['id'],
         name = parsedJson['name'],

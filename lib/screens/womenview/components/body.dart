@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/constants.dart';
-import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/models/TestProduct.dart';
 import 'package:shop_app/screens/details/details_screen.dart';
 import 'package:shop_app/screens/womenview/components/categories.dart';
 
 import 'item_card.dart';
 
 class BodyWomen extends StatelessWidget {
-  final List<Product> product;
+  final List<TestProduct> product;
 
-  const BodyWomen({Key? key, required this.product}) : super(key: key);
+  const BodyWomen({Key key, this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,13 +19,7 @@ class BodyWomen extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              "Women",
-              style: Theme.of(context)
-                  .textTheme
-                  .headline5
-                  
-            ),
+            child: Text("Women", style: Theme.of(context).textTheme.headline5),
           ),
           // Categories(),
           Expanded(

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-
 import 'cart_counter.dart';
 
 class CounterWithFavBtn extends StatelessWidget {
   const CounterWithFavBtn({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -14,7 +13,6 @@ class CounterWithFavBtn extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         CartCounter(),
-        
       ],
     );
   }

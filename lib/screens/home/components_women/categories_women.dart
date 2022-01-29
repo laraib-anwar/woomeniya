@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../size_config.dart';
 import 'section_title_women.dart';
 
-class Categories  extends StatelessWidget {
-  const Categories ({
-    Key? key,
+class Categories extends StatelessWidget {
+  const Categories({
+    Key key,
   }) : super(key: key);
 
   @override
@@ -48,11 +48,11 @@ class Categories  extends StatelessWidget {
 
 class SpecialOfferCard extends StatelessWidget {
   const SpecialOfferCard({
-    Key? key,
-    required this.category,
-    required this.image,
-    required this.numOfBrands,
-    required this.press,
+    Key key,
+    this.category,
+    this.image,
+    this.numOfBrands,
+    this.press,
   }) : super(key: key);
 
   final String category, image;

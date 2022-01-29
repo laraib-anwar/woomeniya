@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class RatingBar extends StatelessWidget {
   final double rating;
 
-  const RatingBar({Key? key, required this.rating}) : super(key: key);
+  const RatingBar({Key key, this.rating}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

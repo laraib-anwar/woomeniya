@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/models/TestProduct.dart';
 import 'package:shop_app/screens/details/details_screen.dart';
-
 
 import 'item_card.dart';
 
 class BodyAccessories extends StatelessWidget {
-  final List<Product> product;
+  final List<TestProduct> product;
 
-  const BodyAccessories({Key? key, required this.product}) : super(key: key);
+  const BodyAccessories({Key key, this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,13 +18,8 @@ class BodyAccessories extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              "Accessories",
-              style: Theme.of(context)
-                  .textTheme
-                  .headline5
-                  
-            ),
+            child: Text("Accessories",
+                style: Theme.of(context).textTheme.headline5),
           ),
           // Categories(),
           Expanded(

@@ -4,7 +4,7 @@ import 'package:shop_app/models/Category.dart';
 
 class SubcategoryGrid extends StatelessWidget {
   final Category category;
-  SubcategoryGrid({Key? key, required this.category}) : super(key: key);
+  SubcategoryGrid({Key key, this.category}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -12,16 +12,16 @@ class Product {
   bool isPopular;
   double rating;
   Product(
-      {required this.id,
-      required this.subcategoryId,
-      required this.brand,
-      required this.name,
-      required this.description,
-      required this.imageUrls,
-      required this.prices,
-      required this.selectedPrice,
-      required this.isPopular,
-      required this.rating});
+      { this.id,
+       this.subcategoryId,
+       this.brand,
+       this.name,
+       this.description,
+       this.imageUrls,
+       this.prices,
+       this.selectedPrice,
+       this.isPopular,
+       this.rating});
   Product.fromJson(Map<String, dynamic> parsedJson, String source)
       : id = parsedJson['id'],
         name = parsedJson['name'],

@@ -4,7 +4,7 @@ import 'package:shop_app/screens/menview/men_view.dart';
 
 class GridItem extends StatelessWidget {
   final Subcategory subcategory;
-  GridItem({Key? key, required this.subcategory}) : super(key: key);
+  GridItem({Key key, this.subcategory}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return InkWell(

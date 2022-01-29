@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/models/TestProduct.dart';
 import 'package:shop_app/size_config.dart';
 
 import '../constants.dart';
 
 class ItemCard extends StatelessWidget {
-  final Product product;
+  final TestProduct product;
   //final Function press;
   const ItemCard({
-    Key? key,
-    required this.product,
+    Key key,
+    this.product,
   }) : super(key: key);
 
   @override

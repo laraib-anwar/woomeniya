@@ -5,7 +5,7 @@ import '../../../size_config.dart';
 
 class Budget extends StatelessWidget {
   const Budget({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

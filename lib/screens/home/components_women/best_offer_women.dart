@@ -5,7 +5,7 @@ import 'package:shop_app/size_config.dart';
 
 class BestOffer extends StatefulWidget {
   const BestOffer({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

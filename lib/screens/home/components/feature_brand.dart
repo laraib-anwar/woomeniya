@@ -5,14 +5,17 @@ import '../../../size_config.dart';
 
 class FeatureBrand extends StatelessWidget {
   const FeatureBrand({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       Text('Feature Brand',
-          textAlign: TextAlign.center, style: TextStyle(color: Colors.red[300],fontSize: 22,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              color: Colors.red[300],
+              fontSize: 22,
               fontWeight: FontWeight.bold)),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -27,7 +30,6 @@ class FeatureBrand extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Image.asset('assets/images/tshirt.png')),
-              
             ],
           ),
           Column(
@@ -40,10 +42,8 @@ class FeatureBrand extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Image.asset('assets/images/shoes2.png')),
-              
             ],
           ),
-          
         ],
       ),
       SizedBox(height: getProportionateScreenWidth(20)),
@@ -76,8 +76,6 @@ class FeatureBrand extends StatelessWidget {
           ),
         ],
       ),
-      
-
     ]);
   }
 }

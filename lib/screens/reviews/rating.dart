@@ -17,7 +17,7 @@ class _Rating extends State<Rating> {
     if (index < _currentRating) {
       return Icon(Icons.star, color: Colors.orange);
     } else {
-      return Icon(Icons.star_border_outlined);
+      return Icon(Icons.star_border);
     }
   }
 
