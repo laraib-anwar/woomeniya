@@ -1,4 +1,4 @@
-import 'Product1.dart';
+import 'Product.dart';
 
 class BasketItem {
   int quantity;
@@ -6,10 +6,7 @@ class BasketItem {
   String message;
   String attachmentUrl;
   BasketItem(
-      {this.quantity = 1,
-      required this.product,
-      required this.message,
-      required this.attachmentUrl});
+      {this.quantity = 1, this.product, this.message, this.attachmentUrl});
   BasketItem.fromJson(Map<String, dynamic> parsedJson)
       : quantity = parsedJson['quantity'],
         product = Product.fromJson(parsedJson['product'], "localStorage"),

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:shop_app/constants.dart';
 
 import '../../../size_config.dart';
 
 class NewArrival extends StatelessWidget {
   const NewArrival({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -25,13 +24,13 @@ class NewArrival extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Container(
-                    height: getProportionateScreenWidth(120),
-                    width: getProportionateScreenWidth(120),
-                    decoration: BoxDecoration(
-                      color: Colors.red[300],
-                      
-                    ),
-                    child: Image.asset('assets/images/printed_t_shirt.jpg')),
+                  height: getProportionateScreenWidth(120),
+                  width: getProportionateScreenWidth(120),
+                  decoration: BoxDecoration(
+                    color: Colors.red[300],
+                  ),
+                  child: Image.asset('assets/images/printed_t_shirt.jpg'),
+                ),
               ),
               Text(
                 'Printed T Shirts',
@@ -44,13 +43,13 @@ class NewArrival extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Container(
-                    height: getProportionateScreenWidth(120),
-                    width: getProportionateScreenWidth(120),
-                    decoration: BoxDecoration(
-                      color: Colors.orange[300],
-                      
-                    ),
-                    child: Image.asset('assets/images/half_sleeve_t_shirt.jpg')),
+                  height: getProportionateScreenWidth(120),
+                  width: getProportionateScreenWidth(120),
+                  decoration: BoxDecoration(
+                    color: Colors.orange[300],
+                  ),
+                  child: Image.asset('assets/images/half_sleeve_t_shirt.jpg'),
+                ),
               ),
               Text(
                 'Half sleeves',
@@ -63,13 +62,13 @@ class NewArrival extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Container(
-                    height: getProportionateScreenWidth(120),
-                    width: getProportionateScreenWidth(120),
-                    decoration: BoxDecoration(
-                      color: Colors.green[300],
-                      
-                    ),
-                    child: Image.asset('assets/images/full_sleeve_t_shirt.jpg')),
+                  height: getProportionateScreenWidth(120),
+                  width: getProportionateScreenWidth(120),
+                  decoration: BoxDecoration(
+                    color: Colors.green[300],
+                  ),
+                  child: Image.asset('assets/images/full_sleeve_t_shirt.jpg'),
+                ),
               ),
               Text(
                 'Full Sleeves',
@@ -88,13 +87,13 @@ class NewArrival extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Container(
-                    height: getProportionateScreenWidth(120),
-                    width: getProportionateScreenWidth(120),
-                    decoration: BoxDecoration(
-                      color: Colors.yellow[300],
-                     
-                    ),
-                    child: Image.asset('assets/images/ethnic.jpg')),
+                  height: getProportionateScreenWidth(120),
+                  width: getProportionateScreenWidth(120),
+                  decoration: BoxDecoration(
+                    color: Colors.yellow[300],
+                  ),
+                  child: Image.asset('assets/images/ethnic.jpg'),
+                ),
               ),
               Text(
                 'Ethnic Fusion Wear',
@@ -107,13 +106,13 @@ class NewArrival extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Container(
-                    height: getProportionateScreenWidth(120),
-                    width: getProportionateScreenWidth(120),
-                    decoration: BoxDecoration(
-                      color: Colors.blue[300],
-                     
-                    ),
-                    child: Image.asset('assets/images/plain_t_shirt.jpg')),
+                  height: getProportionateScreenWidth(120),
+                  width: getProportionateScreenWidth(120),
+                  decoration: BoxDecoration(
+                    color: Colors.blue[300],
+                  ),
+                  child: Image.asset('assets/images/plain_t_shirt.jpg'),
+                ),
               ),
               Text(
                 'Plain T shirts',
@@ -130,7 +129,6 @@ class NewArrival extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
-                      
                     ),
                     child: Image.asset('assets/images/pyjama.jpeg')),
               ),
@@ -174,7 +172,6 @@ class NewArrival extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.indigo[300],
-                      
                     ),
                     child: Image.asset('assets/images/jogger.jpg')),
               ),
@@ -217,7 +214,6 @@ class NewArrival extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.teal[300],
-                     
                     ),
                     child: Image.asset('assets/images/shirt.jpg')),
               ),
@@ -236,7 +232,6 @@ class NewArrival extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.cyan[300],
-                     
                     ),
                     child: Image.asset('assets/images/shoes2.png')),
               ),
@@ -255,7 +250,6 @@ class NewArrival extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.orange[100],
-                      
                     ),
                     child: Image.asset('assets/images/Polo_t_shirt.jpg')),
               ),
@@ -280,7 +274,6 @@ class NewArrival extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.red[100],
-                      
                     ),
                     child: Image.asset('assets/images/vest.jpeg')),
               ),
@@ -299,7 +292,6 @@ class NewArrival extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.blue[100],
-                      
                     ),
                     child: Image.asset('assets/images/short.jpg')),
               ),
@@ -318,7 +310,6 @@ class NewArrival extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.pink[300],
-                     
                     ),
                     child: Image.asset('assets/images/combo.jpg')),
               ),
@@ -337,13 +328,12 @@ class NewArrival extends StatelessWidget {
           Column(
             children: [
               ClipRRect(
-                 borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
                 child: Container(
                     height: getProportionateScreenWidth(120),
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
-                     
                     ),
                     child: Image.asset('assets/images/hoddy.jpg')),
               ),
@@ -356,13 +346,12 @@ class NewArrival extends StatelessWidget {
           Column(
             children: [
               ClipRRect(
-                 borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
                 child: Container(
                     height: getProportionateScreenWidth(120),
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.yellow[100],
-                      
                     ),
                     child: Image.asset('assets/images/jacket.jpg')),
               ),
@@ -375,13 +364,12 @@ class NewArrival extends StatelessWidget {
           Column(
             children: [
               ClipRRect(
-                 borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
                 child: Container(
                     height: getProportionateScreenWidth(120),
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.purple[100],
-                      
                     ),
                     child: Image.asset('assets/images/sweater.jpg')),
               ),

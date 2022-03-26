@@ -2,19 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shop_app/screens/accessoriesview/components/body.dart';
 import 'package:shop_app/screens/womenview/constants.dart';
-import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/models/TestProduct.dart';
 import 'package:shop_app/screens/womenview/components/body.dart';
 
 class AccessoriesScreen extends StatelessWidget {
-   final List<Product> product;
+  final List<TestProduct> product;
   static String routeName = '/accessories_view';
 
-  const AccessoriesScreen({Key? key, required this.product}) : super(key: key);
+  const AccessoriesScreen({Key key, this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: BodyAccessories(product: demoProducts,),
+      body: BodyAccessories(
+        product: demoProducts,
+      ),
     );
   }
 

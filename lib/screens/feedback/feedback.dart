@@ -26,7 +26,7 @@ class _FeedBackScreenState extends State<FeedBackScreen> {
       ),
       body: SingleChildScrollView(
         child: Container(
-           height: MediaQuery.of(context).size.height,
+          height: MediaQuery.of(context).size.height,
           child: Padding(
             padding: EdgeInsets.all(
               getProportionateScreenWidth(20.0),
@@ -247,13 +247,13 @@ class _FeedBackScreenState extends State<FeedBackScreen> {
     );
   }
 
-  Widget buildCheckItem({required String title, required bool isSelected}) {
+  Widget buildCheckItem({String title, bool isSelected}) {
     return Container(
       padding: const EdgeInsets.all(6.0),
       child: Row(
         children: [
           Icon(
-            isSelected ? Icons.check_circle : Icons.circle,
+            isSelected ? Icons.check_circle : Icons.add_circle,
             color: isSelected ? Colors.blue : Colors.grey,
           ),
           SizedBox(

@@ -4,13 +4,11 @@ import 'package:shop_app/screens/home/components/icon_btn_with_counter.dart';
 import 'package:shop_app/screens/home/components/search_field.dart';
 import 'package:shop_app/screens/notifications/notifications.dart';
 
-
 import '../../../size_config.dart';
-
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

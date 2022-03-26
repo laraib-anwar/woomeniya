@@ -6,10 +6,7 @@ class CategoriesLeftPanel extends StatelessWidget {
   final int selectedIndex;
   final Function(int index) onTap;
   CategoriesLeftPanel(
-      {Key? key,
-      required this.categories,
-      required this.selectedIndex,
-      required this.onTap})
+      {Key key, this.categories, this.selectedIndex, this.onTap})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

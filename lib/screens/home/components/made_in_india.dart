@@ -6,7 +6,7 @@ import '../../../size_config.dart';
 
 class MadeInIndia extends StatelessWidget {
   const MadeInIndia({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -28,13 +28,10 @@ class MadeInIndia extends StatelessWidget {
                 )),
           ],
         ),
-        
-        
-        
-             Image.asset(
-           'assets/images/Make_in_india.jpg',
-           height: 200,
-         )
+        Image.asset(
+          'assets/images/Make_in_india.jpg',
+          height: 200,
+        )
       ]),
       width: MediaQuery.of(context).size.width,
       height: getProportionateScreenWidth(250),

@@ -6,7 +6,7 @@ import '../../../size_config.dart';
 
 class MessageCommunity extends StatelessWidget {
   const MessageCommunity({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

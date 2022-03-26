@@ -5,21 +5,21 @@ import '../size_config.dart';
 
 class FormError extends StatelessWidget {
   const FormError({
-    Key? key,
-    required this.errors,
+    Key key,
+    this.errors,
   }) : super(key: key);
 
-  final List<String?> errors;
+  final List<String> errors;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: List.generate(
-          errors.length, (index) => formErrorText(error: errors[index]!)),
+          errors.length, (index) => formErrorText(error: errors[index])),
     );
   }
 
-  Row formErrorText({required String error}) {
+  Row formErrorText({String error}) {
     return Row(
       children: [
         SvgPicture.asset(

@@ -5,7 +5,7 @@ import '../../../size_config.dart';
 
 class TopWear extends StatelessWidget {
   const TopWear({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -27,7 +27,6 @@ class TopWear extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.red,
-                      
                     ),
                     child: Image.asset('assets/images/printed_t_shirt.jpg')),
               ),
@@ -52,9 +51,9 @@ class TopWear extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.green,
-                      
                     ),
-                    child: Image.asset('assets/images/half_sleeve_t_shirt.jpg')),
+                    child:
+                        Image.asset('assets/images/half_sleeve_t_shirt.jpg')),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -77,9 +76,9 @@ class TopWear extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.blue,
-                      
                     ),
-                    child: Image.asset('assets/images/full_sleeve_t_shirt.jpg')),
+                    child:
+                        Image.asset('assets/images/full_sleeve_t_shirt.jpg')),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -108,7 +107,6 @@ class TopWear extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.orange,
-                      
                     ),
                     child: Image.asset('assets/images/ethnic.jpg')),
               ),
@@ -133,7 +131,6 @@ class TopWear extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.yellow,
-                     
                     ),
                     child: Image.asset('assets/images/plain_t_shirt.jpg')),
               ),
@@ -158,7 +155,6 @@ class TopWear extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.purple,
-                      
                     ),
                     child: Image.asset('assets/images/pyjama.jpeg')),
               ),
@@ -189,7 +185,6 @@ class TopWear extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.indigo,
-                     
                     ),
                     child: Image.asset('assets/images/boxer.jpg')),
               ),
@@ -214,7 +209,6 @@ class TopWear extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.grey,
-                      
                     ),
                     child: Image.asset('assets/images/jogger.jpg')),
               ),
@@ -239,7 +233,6 @@ class TopWear extends StatelessWidget {
                     width: getProportionateScreenWidth(120),
                     decoration: BoxDecoration(
                       color: Colors.red[500],
-                      
                     ),
                     child: Image.asset('assets/images/denims.jpg')),
               ),

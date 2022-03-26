@@ -18,7 +18,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.8.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -26,13 +26,34 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.3
+  cupertino_icons: ^1.0.0
   # if you are using latest flutter please update your flutter_svg package to ^0.18.*
-  flutter_svg: ^0.22.0 # help us to use SVG in our app
-  provider: ^6.0.0 # for State management
-  carousel_slider: ^4.0.0
-  font_awesome_flutter: ^9.1.0
+  flutter_svg: ^0.19.1 # help us to use SVG in our app
+  provider: ^4.3.2 # for State management
+  carousel_slider: ^2.3.1
+  font_awesome_flutter: ^8.10.0
   flushbar: ^1.10.4
+  dio: ^3.0.9
+  shared_preferences: ^0.5.7
+  firebase_core: ^0.5.0
+  firebase_auth: ^0.18.0+1
+  google_sign_in: ^4.5.3
+  firebase_analytics: ^6.0.1
+  firebase_dynamic_links: ^0.6.2
+  firebase_messaging: ^7.0.0
+  flutter_easyloading: ^2.0.0
+  pin_code_fields: ^5.0.1
+  flare_flutter: ^2.0.6
+  permission_handler: ^5.0.1+1
+  geolocator: ^6.0.0+4
+  geocoder: ^0.2.1
+  data_connection_checker: ^0.3.4
+  connectivity: ^0.4.9
+  cached_network_image: ^2.2.0+1
+  country_code_picker:
+    git:
+      url: git://github.com/tanweer919/CountryCodePicker.git
+      ref: tanweer
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +72,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/rive/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

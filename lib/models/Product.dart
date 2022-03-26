@@ -1,181 +1,57 @@
-import 'package:flutter/material.dart';
+import 'ProductPrices.dart';
 
 class Product {
-  final int id, size;
-  final String title, description, image;
-  final List<String> images;
-  final List<Color> colors;
-  final double rating, price;
-  final bool isFavourite, isPopular;
-
-  Product({
-    required this.id,
-    required this.image,
-    required this.images,
-    required this.colors,
-    this.size = 0,
-    this.rating = 0.0,
-    this.isFavourite = false,
-    this.isPopular = false,
-    required this.title,
-    required this.price,
-    required this.description,
-  });
+  int id;
+  int subcategoryId;
+  String name;
+  String brand;
+  String description;
+  List<String> imageUrls;
+  List<ProductPrices> prices;
+  int selectedPrice;
+  bool isPopular;
+  double rating;
+  Product(
+      { this.id,
+       this.subcategoryId,
+       this.brand,
+       this.name,
+       this.description,
+       this.imageUrls,
+       this.prices,
+       this.selectedPrice,
+       this.isPopular,
+       this.rating});
+  Product.fromJson(Map<String, dynamic> parsedJson, String source)
+      : id = parsedJson['id'],
+        name = parsedJson['name'],
+        subcategoryId = parsedJson['subcategory_id'],
+        brand = parsedJson['brand_name'],
+        description = parsedJson["description"] ?? "",
+        imageUrls = parsedJson['images'].length > 0
+            ? List<String>.from(parsedJson['images'].map(
+                    (entry) => source == "server" ? entry["image_url"] : entry))
+                .toList()
+            : ["https://storage.googleapis.com/dekorner/assets/logo_dark.png"],
+        prices = parsedJson['prices']
+                .map<ProductPrices>(
+                    (price) => ProductPrices.fromJson(price, source))
+                .toList() ??
+            [],
+        selectedPrice = parsedJson["selected_price"] ?? 0,
+        isPopular = parsedJson["isPopular"],
+        rating = parsedJson["rating"];
+  static Map<String, dynamic> toMap(Product product) => {
+        "id": product.id,
+        "name": product.name,
+        "subcategory_id": product.subcategoryId,
+        "brand_name": product.brand,
+        "description": product.description,
+        "images": product.imageUrls,
+        "prices": product.prices
+            .map<Map<String, dynamic>>((price) => ProductPrices.toMap(price))
+            .toList(),
+        "selected_price": product.selectedPrice,
+        "rating": product.rating,
+      };
 }
-
-// Our demo Products
-
-List<Product> demoProducts = [
-  Product(
-    id: 1,
-    image:"assets/images/ps4_console_white_1.png",
-    images: [
-      "assets/images/ps4_console_white_1.png",
-      "assets/images/ps4_console_white_2.png",
-      "assets/images/ps4_console_white_3.png",
-      "assets/images/ps4_console_white_4.png",
-    ],
-    colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Wireless Controller for PS4™",
-    price: 64.99,
-    description: description,
-    rating: 4.8,
-    isFavourite: true,
-    isPopular: true,
-  ),
-  Product(
-    id: 2,
-    image:"assets/images/ps4_console_white_2.png",
-    images: [
-      "assets/images/Image Popular Product 2.png",
-    ],
-    colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Nike Sport White - Man Pant",
-    price: 50.5,
-    description: description,
-    rating: 4.1,
-    isPopular: true,
-  ),
-  Product(
-    id: 3,
-    image:"assets/images/ps4_console_white_1.png",
-    images: [
-      "assets/images/glap.png",
-    ],
-    colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Gloves XC Omega - Polygon",
-    price: 36.55,
-    description: description,
-    rating: 4.1,
-    isFavourite: true,
-    isPopular: true,
-  ),
-  Product(
-    id: 4,
-    image:"assets/images/ps4_console_white_1.png",
-    images: [
-      "assets/images/wireless headset.png",
-    ],
-    colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Logitech Head",
-    price: 20.20,
-    description: description,
-    rating: 4.1,
-    isFavourite: true,
-  ),
-  Product(
-    id: 5,
-    image: "assets/images/glap.png",
-    images: [
-      "assets/images/wireless headset.png",
-    ],
-    colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Logitech Head",
-    price: 20.20,
-    description: description,
-    rating: 4.1,
-    isFavourite: true,
-  ),
-  Product(
-    id: 6,
-    image: "assets/images/woomeniya_3.jpg",
-    images: [
-      "assets/images/wireless headset.png",
-    ],
-    colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Logitech Head",
-    price: 20.20,
-    description: description,
-    rating: 4.1,
-    isFavourite: true,
-  ),
-  Product(
-    id: 7,
-    image: "assets/images/woomeniya_2.jpg",
-    images: [
-      "assets/images/wireless headset.png",
-    ],
-    colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Logitech Head",
-    price: 20.20,
-    description: description,
-    rating: 4.1,
-    isFavourite: true,
-  ),
-  Product(
-    id: 8,
-    image: "assets/images/woomeniya_1.jpg",
-    images: [
-      "assets/images/wireless headset.png",
-    ],
-    colors: [
-      Color(0xFFF6625E),
-      Color(0xFF836DB8),
-      Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Logitech Head",
-    price: 20.20,
-    description: description,
-    rating: 4.1,
-    isFavourite: true,
-  ),
-];
-
-const String description =
-    "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";

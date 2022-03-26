@@ -8,7 +8,6 @@ import 'package:shop_app/size_config.dart';
 import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
 
-
 class Body extends StatefulWidget {
   @override
   _BodyState createState() => _BodyState();
@@ -21,11 +20,7 @@ class _BodyState extends State<Body> {
       "text": "Welcome to Woomeniya, Let’s shop!",
       "image": "assets/images/splash_1.png"
     },
-    
-    {
-      "text": "Fashion for you.",
-      "image": "assets/images/splash_3.png"
-    },
+    {"text": "Fashion for you.", "image": "assets/images/splash_3.png"},
   ];
   @override
   Widget build(BuildContext context) {
@@ -68,7 +63,8 @@ class _BodyState extends State<Body> {
                     DefaultButton(
                       text: "Continue",
                       press: () {
-                        Navigator.pushNamed(context, SignInPhoneScreen.routeName);
+                        Navigator.pushNamed(
+                            context, SignInPhoneScreen.routeName);
                       },
                     ),
                     Spacer(),
@@ -82,7 +78,7 @@ class _BodyState extends State<Body> {
     );
   }
 
-  AnimatedContainer buildDot({int? index}) {
+  AnimatedContainer buildDot({int index}) {
     return AnimatedContainer(
       duration: kAnimationDuration,
       margin: EdgeInsets.only(right: 5),
@@ -95,7 +91,6 @@ class _BodyState extends State<Body> {
     );
   }
 }
-
 
 // import 'package:flutter/material.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
@@ -120,11 +115,11 @@ class _BodyState extends State<Body> {
 //     ];
 //     return Padding(
 //       padding: EdgeInsets.all(getProportionateScreenWidth(20)),
-      
+
 //       child: SingleChildScrollView(
 //         scrollDirection: Axis.horizontal,
 //         child: Row(
-          
+
 //         children: List.generate(
 //           categories.length,
 //           (index) => CategoryCard(
@@ -141,13 +136,13 @@ class _BodyState extends State<Body> {
 
 // class CategoryCard extends StatelessWidget {
 //   const CategoryCard({
-//     Key? key,
-//     required this.icon,
-//     required this.text,
+//     Key key,
+//      this.icon,
+//      this.text,
 //     required this.press,
 //   }) : super(key: key);
 
-//   final String? icon, text;
+//   final String icon, text;
 //   final GestureTapCallback press;
 
 //   @override
@@ -158,9 +153,9 @@ class _BodyState extends State<Body> {
 //         width: getProportionateScreenWidth(55),
 //         child: Column(
 //           children: [
-            
+
 //             Container(
-              
+
 //               padding: EdgeInsets.all(getProportionateScreenWidth(15)),
 //               height: getProportionateScreenWidth(55),
 //               width: getProportionateScreenWidth(55),
@@ -172,12 +167,11 @@ class _BodyState extends State<Body> {
 //             ),
 //             SizedBox(height: 20),
 //             Text(text!, textAlign: TextAlign.center),
-            
-            
+
 //           ],
 //         ),
 //       ),
-     
+
 //     );
 //   }
 // }

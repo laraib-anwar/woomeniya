@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shop_app/models/Product.dart';
-
+import 'package:shop_app/models/TestProduct.dart';
 
 import '../../../size_config.dart';
 
 class ProductDescription extends StatelessWidget {
   const ProductDescription({
-    Key? key,
-    required this.product,
+    Key key,
+    this.product,
     this.pressOnSeeMore,
   }) : super(key: key);
 
-  final Product product;
-  final GestureTapCallback? pressOnSeeMore;
+  final TestProduct product;
+  final GestureTapCallback pressOnSeeMore;
 
   @override
   Widget build(BuildContext context) {
@@ -25,25 +24,25 @@ class ProductDescription extends StatelessWidget {
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children:[
-              
-                Text(
+            children: [
+              Text(
                 product.title,
                 style: Theme.of(context).textTheme.headline6,
               ),
               Image(
                   image: AssetImage("assets/images/made_in_india.jpg"),
                   height: 50),
-                  
-            ] ,
+            ],
           ),
-         
         ),
-        SizedBox(height:10),
-        Padding(padding: EdgeInsets.only(left:30),child: Container(
+        SizedBox(height: 10),
+        Padding(
+          padding: EdgeInsets.only(left: 30),
+          child: Container(
               width: MediaQuery.of(context).size.width / 2,
               height: getProportionateScreenWidth(30),
-              child: Padding(padding:EdgeInsets.all(5.0),
+              child: Padding(
+                padding: EdgeInsets.all(5.0),
                 child: Text('Verified Purchaser',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -58,8 +57,8 @@ class ProductDescription extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Colors.teal, borderRadius: BorderRadius.circular(10))),
         ),
-         
-      SizedBox(height: 10),
+
+        SizedBox(height: 10),
         Align(
           alignment: Alignment.centerRight,
           child: Container(

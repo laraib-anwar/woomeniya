@@ -6,7 +6,7 @@ import '../../../size_config.dart';
 
 class DesignVote extends StatelessWidget {
   const DesignVote({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

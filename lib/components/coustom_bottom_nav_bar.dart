@@ -9,8 +9,8 @@ import '../enums.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
-    Key? key,
-    required this.selectedMenu,
+    Key key,
+    this.selectedMenu,
   }) : super(key: key);
 
   final MenuState selectedMenu;
@@ -51,7 +51,7 @@ class CustomBottomNavBar extends StatelessWidget {
               ),
               IconButton(
                 icon: Icon(
-                  Icons.category_outlined,
+                  Icons.category,
                   color: MenuState.categories == selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,
@@ -63,7 +63,7 @@ class CustomBottomNavBar extends StatelessWidget {
               ),
               IconButton(
                 icon: SvgPicture.asset(
-                  "assets/icons/User Icon.svg",
+                  "assets/icons/User_Icon.svg",
                   color: MenuState.profile == selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,

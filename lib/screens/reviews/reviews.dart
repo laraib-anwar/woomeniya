@@ -10,32 +10,36 @@ class ReviewsScreen extends StatefulWidget {
 }
 
 class _ReviewsScreen extends State<ReviewsScreen> {
-  late int _rating = 0;
+  int _rating = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            title: Text("Review", style: (TextStyle(color: kPrimaryColor)))),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Rating((rating) {
-                setState(() {
-                  _rating = rating;
-                });
-              }, 5),
-              SizedBox(
-                  height: 44,
-                  child: (_rating != null && _rating != 0)
-                      ? Text("You selected $_rating rating",
-                          style: TextStyle(fontSize: 22))
-                      : SizedBox.shrink()),
-              ReviewComment(),
-              FlatButton(onPressed: (){}, child:  Text("Post your review."),color:Colors.teal[200])
-            ],
-          ),
-        ));
+      appBar: AppBar(
+          title: Text("Review", style: (TextStyle(color: kPrimaryColor)))),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Rating((rating) {
+              setState(() {
+                _rating = rating;
+              });
+            }, 5),
+            SizedBox(
+                height: 44,
+                child: (_rating != null && _rating != 0)
+                    ? Text("You selected $_rating rating",
+                        style: TextStyle(fontSize: 22))
+                    : SizedBox.shrink()),
+            ReviewComment(),
+            FlatButton(
+                onPressed: () {},
+                child: Text("Post your review."),
+                color: Colors.teal[200])
+          ],
+        ),
+      ),
+    );
   }
 }

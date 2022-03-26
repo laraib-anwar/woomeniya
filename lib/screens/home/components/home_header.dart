@@ -9,33 +9,30 @@ import 'search_field.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-          EdgeInsets.all(getProportionateScreenWidth(35),
-          ),
+      padding: EdgeInsets.only(left: 35, right: 5, top: 5, bottom: 5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Padding(padding: EdgeInsets.only(left: 10),child:Row(
-            children:[
+          Padding(
+            padding: EdgeInsets.only(left: 10),
+            child: Row(
+              children: [
                 Image(
                     image: AssetImage("assets/images/woomeniya_logo.png"),
-                    height: 20),]
-          )),
+                    height: 20),
+              ],
+            ),
+          ),
           SearchField(),
           IconBtnWithCounter(
             svgSrc: "assets/icons/Cart Icon.svg",
             press: () => Navigator.pushNamed(context, CartScreen.routeName),
-          ),
-          IconBtnWithCounter(
-            svgSrc: "assets/icons/Bell.svg",
-            numOfitem: 3,
-            press: () => Navigator.pushNamed(context, NotificationScreen.routeName),
           ),
         ],
       ),

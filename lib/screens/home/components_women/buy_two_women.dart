@@ -6,7 +6,7 @@ import '../../../size_config.dart';
 
 class BuyTwo extends StatelessWidget {
   const BuyTwo({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

@@ -8,12 +8,12 @@ class ProductPrices {
   int offPercentage;
   String unit;
   ProductPrices(
-      {required this.price,
-      required this.size,
-      required this.MRP,
-      required this.stockQuantity,
-      required this.offPercentage,
-      required this.unit});
+      {this.price,
+      this.size,
+      this.MRP,
+      this.stockQuantity,
+      this.offPercentage,
+      this.unit});
   ProductPrices.fromJson(Map<String, dynamic> parsedJson, String source)
       : size = parsedJson["weight"],
         price = parsedJson["price"],

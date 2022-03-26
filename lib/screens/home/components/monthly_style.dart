@@ -5,15 +5,19 @@ import '../../../size_config.dart';
 
 class MonthlyStyle extends StatelessWidget {
   const MonthlyStyle({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       Text('Whats your monthly Style',
-          textAlign: TextAlign.center, style: TextStyle(color: kPrimaryColor,fontSize: 22, fontWeight: FontWeight.bold)),
-          SizedBox(height: 10,),
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              color: kPrimaryColor, fontSize: 22, fontWeight: FontWeight.bold)),
+      SizedBox(
+        height: 10,
+      ),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -85,9 +89,7 @@ class MonthlyStyle extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Image.asset('assets/images/shoes2.png')),
-              Text(
-                'May', style: TextStyle(fontWeight: FontWeight.bold)
-              )
+              Text('May', style: TextStyle(fontWeight: FontWeight.bold))
             ],
           ),
           Column(
@@ -105,7 +107,7 @@ class MonthlyStyle extends StatelessWidget {
           ),
         ],
       ),
-       SizedBox(height: getProportionateScreenWidth(20)),
+      SizedBox(height: getProportionateScreenWidth(20)),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -178,7 +180,8 @@ class MonthlyStyle extends StatelessWidget {
                   ),
                   child: Image.asset('assets/images/shoes2.png')),
               Text(
-                'November', style: TextStyle(fontWeight: FontWeight.bold),
+                'November',
+                style: TextStyle(fontWeight: FontWeight.bold),
               )
             ],
           ),
@@ -192,7 +195,10 @@ class MonthlyStyle extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Image.asset('assets/images/ps4_console_blue_1.png')),
-              Text('December', style: TextStyle(fontWeight: FontWeight.bold),)
+              Text(
+                'December',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              )
             ],
           ),
         ],

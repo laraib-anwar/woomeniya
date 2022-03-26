@@ -7,7 +7,7 @@ import '../../../size_config.dart';
 
 class Deals extends StatelessWidget {
   const Deals({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -100,14 +100,14 @@ class Deals extends StatelessWidget {
 
 class SpecialOfferCard extends StatelessWidget {
   const SpecialOfferCard({
-    Key? key,
-    required this.icon,
-    required this.text,
-    required this.press,
-    required this.col,
+    Key key,
+    this.icon,
+    this.text,
+    this.press,
+    this.col,
   }) : super(key: key);
 
-  final String? icon, text;
+  final String icon, text;
   final GestureTapCallback press;
   final col;
 
@@ -127,7 +127,7 @@ class SpecialOfferCard extends StatelessWidget {
                   width: getProportionateScreenWidth(150),
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage(icon!),
+                        image: AssetImage(icon),
                         fit: BoxFit.fill,
                       ),
                       borderRadius: BorderRadius.circular(10)),
@@ -135,7 +135,7 @@ class SpecialOfferCard extends StatelessWidget {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  text!,
+                  text,
                   textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),

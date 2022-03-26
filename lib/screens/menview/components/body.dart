@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/constants.dart';
-import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/models/TestProduct.dart';
 import 'package:shop_app/screens/details/details_screen.dart';
 import 'package:shop_app/screens/menview/components/categories.dart';
 
 import 'item_card.dart';
 
 class Body extends StatelessWidget {
-  final List<Product> product;
+  final List<TestProduct> product;
 
-  const Body({Key? key, required this.product}) : super(key: key);
+  const Body({Key key, this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

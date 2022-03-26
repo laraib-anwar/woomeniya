@@ -26,49 +26,47 @@ import 'popular_product_accessories.dart';
 class BodyAccessories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-           
-            SizedBox(height: getProportionateScreenWidth(10)),
-            
-            SizedBox(height: getProportionateScreenWidth(10)),
-            DiscountBanner(),
-            SizedBox(height: getProportionateScreenHeight(20)),
-            UrbanMembership(),
-            SizedBox(height: getProportionateScreenHeight(20)),
-            Deals(),
-            SizedBox(height: getProportionateScreenWidth(30)),
-            Text('Explore Now',textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 22.0, color: kPrimaryColor, fontWeight: FontWeight.bold)),
-            SizedBox(height: getProportionateScreenWidth(10)),
-            ExploreNow(),
-            SizedBox(height: getProportionateScreenWidth(30)),
-           
-            TopWear(),
-            SizedBox(height: getProportionateScreenWidth(30)),
-            BuyTwo(),
-            
-            SizedBox(height: getProportionateScreenWidth(20)),
-            Coupon(),
-           
-            SizedBox(height: getProportionateScreenWidth(30)),
-            BestOffer(),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+         
+          SizedBox(height: getProportionateScreenWidth(10)),
           
-            
-            SizedBox(height: getProportionateScreenWidth(30)),
-            MonthlyStyle(),
-            
-           
-            SizedBox(height: getProportionateScreenWidth(30)),
-            PopularProducts(),
-            // SizedBox(height: getProportionateScreenWidth(30)),
-            // DropDown(),
+          SizedBox(height: getProportionateScreenWidth(10)),
+          DiscountBanner(),
+          SizedBox(height: getProportionateScreenHeight(20)),
+          UrbanMembership(),
+          SizedBox(height: getProportionateScreenHeight(20)),
+          Deals(),
+          SizedBox(height: getProportionateScreenWidth(30)),
+          Text('Explore Now',textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 22.0, color: kPrimaryColor, fontWeight: FontWeight.bold)),
+          SizedBox(height: getProportionateScreenWidth(10)),
+          ExploreNow(),
+          SizedBox(height: getProportionateScreenWidth(30)),
+         
+          TopWear(),
+          SizedBox(height: getProportionateScreenWidth(30)),
+          BuyTwo(),
+          
+          SizedBox(height: getProportionateScreenWidth(20)),
+          Coupon(),
+         
+          SizedBox(height: getProportionateScreenWidth(30)),
+          BestOffer(),
+        
+          
+          SizedBox(height: getProportionateScreenWidth(30)),
+          MonthlyStyle(),
+          
+         
+          SizedBox(height: getProportionateScreenWidth(30)),
+          PopularProducts(),
+          // SizedBox(height: getProportionateScreenWidth(30)),
+          // DropDown(),
 
 
-          ],
-        ),
+        ],
       ),
     );
   }

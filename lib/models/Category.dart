@@ -7,7 +7,7 @@ class Category {
   // String imageUrl;
   // String color;
   // String textColor;
-  Category({required this.id, required this.name, required this.subCategories});
+  Category({this.id, this.name, this.subCategories});
   Category.fromJson(Map<String, dynamic> parsedJson)
       : id = parsedJson['id'],
         name = parsedJson['name'],

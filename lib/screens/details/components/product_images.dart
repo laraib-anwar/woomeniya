@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/models/TestProduct.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
 class ProductImages extends StatefulWidget {
   const ProductImages({
-    Key? key,
-    required this.product,
+    Key key,
+    this.product,
   }) : super(key: key);
 
-  final Product product;
+  final TestProduct product;
 
   @override
   _ProductImagesState createState() => _ProductImagesState();

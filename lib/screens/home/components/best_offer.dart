@@ -5,7 +5,7 @@ import 'package:shop_app/size_config.dart';
 
 class BestOffer extends StatefulWidget {
   const BestOffer({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -35,7 +35,7 @@ class _BestOfferState extends State<BestOffer> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("Best Offer",
+          Text("Best Offer",
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: kPrimaryColor,
@@ -61,8 +61,6 @@ class _BestOfferState extends State<BestOffer> {
                     margin: EdgeInsets.symmetric(horizontal: 2.0),
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                     
-
                         child: Image.asset(
                           i,
                           width: 400,

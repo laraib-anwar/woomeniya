@@ -3,12 +3,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/size_config.dart';
 
-
-
 class ExploreNow extends StatefulWidget {
-
   const ExploreNow({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -22,7 +19,6 @@ class _ExploreNowState extends State<ExploreNow> {
     "assets/images/Image Popular Product 3.png",
     "assets/images/glap.png",
     "assets/images/shoes2.png"
-
   ];
   List<T> map<T>(List list, Function handler) {
     List<T> result = [];
@@ -36,41 +32,40 @@ class _ExploreNowState extends State<ExploreNow> {
   Widget build(BuildContext context) {
     return Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children:[CarouselSlider(
-      options: CarouselOptions(
-        height: 400.0,
-        autoPlay: true,
-        initialPage: 0,
-        autoPlayAnimationDuration: Duration(milliseconds: 800),
-        autoPlayInterval: Duration(seconds: 2),
-        onPageChanged: (index,res) {
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+          CarouselSlider(
+            options: CarouselOptions(
+              height: 400.0,
+              autoPlay: true,
+              initialPage: 0,
+              autoPlayAnimationDuration: Duration(milliseconds: 800),
+              autoPlayInterval: Duration(seconds: 2),
+              onPageChanged: (index, res) {
                 setState(() {
                   _current = index;
                 });
               },
-      ),
-      items: imgList.map((i) {
-        return Builder(
-          builder: (BuildContext context) {
-            return Container(
+            ),
+            items: imgList.map((i) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Container(
                     margin: EdgeInsets.symmetric(horizontal: 2.0),
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                      
-
                         child: Image.asset(
                           i,
                           width: 400,
                           fit: BoxFit.cover,
                         )),
                   );
-          },
-        );
-      }).toList(),
-    ),
-     SizedBox(
+                },
+              );
+            }).toList(),
+          ),
+          SizedBox(
             height: getProportionateScreenWidth(20),
           ),
           Row(
@@ -87,11 +82,6 @@ class _ExploreNowState extends State<ExploreNow> {
               );
             }),
           ),
-    
         ]));
-          
-    
   }
-
-  
 }

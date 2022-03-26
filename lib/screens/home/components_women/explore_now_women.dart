@@ -5,7 +5,7 @@ import 'package:shop_app/size_config.dart';
 
 class ExploreNow extends StatefulWidget {
   const ExploreNow({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

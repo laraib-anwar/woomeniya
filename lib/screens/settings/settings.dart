@@ -70,7 +70,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             Row(
               children: [
                 Icon(
-                  Icons.volume_up_outlined,
+                  Icons.volume_up,
                   color: kPrimaryColor,
                 ),
                 SizedBox(

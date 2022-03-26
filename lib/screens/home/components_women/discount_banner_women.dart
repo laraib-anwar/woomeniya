@@ -5,7 +5,7 @@ import 'package:shop_app/size_config.dart';
 
 class DiscountBanner extends StatefulWidget {
   const DiscountBanner({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -44,10 +44,10 @@ class _DiscountBannerState extends State<DiscountBanner> {
               autoPlayAnimationDuration: Duration(milliseconds: 800),
               autoPlayInterval: Duration(seconds: 2),
               onPageChanged: (i, res) {
-                      setState(() {
-                        _current = i;
-                      });
-                    },
+                setState(() {
+                  _current = i;
+                });
+              },
             ),
             items: imgList.map((i) {
               return Builder(
@@ -60,13 +60,10 @@ class _DiscountBannerState extends State<DiscountBanner> {
                         // decoration: BoxDecoration(
                         //     color: Colors.green[50],
                         //     borderRadius: BorderRadius.circular(20)),
-                        
+
                         child: Image.asset(
-                          
                           i,
-                          width:400,
-                          
-                          
+                          width: 400,
                           fit: BoxFit.cover,
                         )),
                   );
